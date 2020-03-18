@@ -8,15 +8,11 @@
     android:layout_height="match_parent">
 
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-
-
-
 
 <androidx.appcompat.widget.Toolbar
     android:id="@+id/toolbar"
@@ -27,7 +23,31 @@
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
    /> >
 
-</FrameLayout>
+
+    <EditText
+
+        android:id="@+id/edit_expNu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="请输入快递单号"/>
+
+    <EditText
+
+        android:id="@+id/edit_expCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="请输入快递公司名称"/>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查询"/>
+
+
+
+
+</LinearLayout>
 
 
 
