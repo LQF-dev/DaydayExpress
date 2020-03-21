@@ -3,17 +3,17 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_suggest"
-            android:icon="@mipmap/ic_launcher"
+            android:icon="@drawable/ic_talkme"
             android:title="建议"
             />
         <item
             android:id="@+id/nav_share"
-            android:icon="@mipmap/ic_launcher"
+            android:icon="@drawable/ic_share"
             android:title="分享"
             />
         <item
             android:id="@+id/nav_about"
-            android:icon="@mipmap/ic_launcher"
+            android:icon="@drawable/ic_about"
             android:title="关于"
             />
 

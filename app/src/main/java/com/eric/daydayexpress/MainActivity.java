@@ -6,6 +6,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText expCode;
     private EditText expNu;
     final String TAG = "MAinActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,21 +69,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                      Toast.makeText(this, "查询成功", Toast.LENGTH_SHORT).show();
                  }
 
+                //TODO  打开另一个activity
+                 SharedPreferences.Editor editor =  getSharedPreferences("data",MODE_PRIVATE).edit();
+                editor.putString("code",code);
+                editor.putString("number",num);
+                editor.apply();
+                Intent intent = new Intent(this,TraceActivity.class);
+                startActivity(intent);
+
+
+/*
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
                         Log.d("MainActivity", "run:begin ");
                         KdniaoTrackQueryAPI api = new KdniaoTrackQueryAPI();
                         try {
-                            //TODO  打开另一个activity
-                            String result = api.getOrderTracesByJson(code, num);
+
+                            String respond = api.getOrderTracesByJson(code, num);
                             Log.d("MainActivity", result);
                         }catch(Exception e){
                             e.printStackTrace();
                         }
 
                     }
-                }).start();
+                }).start();*/
         }
 
     }

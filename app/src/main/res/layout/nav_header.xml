@@ -12,7 +12,7 @@
         android:id="@+id/icon_myself"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/ic_my_nav"
         android:layout_gravity="center"
         />
 
